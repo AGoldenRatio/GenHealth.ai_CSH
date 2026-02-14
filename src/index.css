@@ -15,3 +15,26 @@ body {
 #root {
   min-height: 100vh;
 }
+
+.customer-form-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.customer-form-modal::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  border-radius: 4px;
+}
+
+.customer-form-modal::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.4);
+  border-radius: 4px;
+}
+
+.customer-form-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+.customer-form-modal {
+  scrollbar-color: rgba(139, 92, 246, 0.4) #1a1a2e;
+  scrollbar-width: thin;
+}

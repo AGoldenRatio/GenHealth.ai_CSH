@@ -1802,7 +1802,7 @@ function CustomerFormModal({ customer, onSave, onClose }) {
       overflow: 'auto',
       padding: '20px'
     }}>
-      <div style={{
+      <div className="customer-form-modal" style={{
         background: '#1a1a2e',
         border: '1px solid rgba(139, 92, 246, 0.3)',
         borderRadius: '12px',
