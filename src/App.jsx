@@ -497,6 +497,11 @@ function App() {
 
   const metrics = calculateMetrics();
   const filteredCustomers = getFilteredAndSortedCustomers();
+  const allCustomers = customers.map(c => ({
+    ...c,
+    healthScore: calculateHealthScore(c),
+    healthStatus: getHealthStatus(calculateHealthScore(c))
+  }));
 
   return (
     <div style={{ 
@@ -1276,7 +1281,7 @@ function App() {
                   Renewal Risk - Next 90 Days
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {filteredCustomers
+                  {allCustomers
                     .filter(c => c.renewalDays <= 90)
                     .sort((a, b) => a.renewalDays - b.renewalDays)
                     .map(customer => (
@@ -1322,7 +1327,7 @@ function App() {
                   Highest Revenue Risk
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {filteredCustomers
+                  {allCustomers
                     .filter(c => c.healthStatus === 'at-risk')
                     .sort((a, b) => b.mrr - a.mrr)
                     .map(customer => (
