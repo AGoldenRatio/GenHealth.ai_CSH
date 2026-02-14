@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Activity, 
-  DollarSign, 
-  Users, 
-  TrendingUp, 
-  TrendingDown, 
+  Activity,
+  DollarSign,
+  Users,
+  TrendingUp,
+  TrendingDown,
   Minus,
   AlertTriangle,
   CheckCircle,
@@ -19,7 +19,8 @@ import {
   Calendar,
   Zap,
   Target,
-  Shield
+  Shield,
+  HeartPulse
 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
@@ -602,7 +603,7 @@ function App() {
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <Activity size={28} />
+              <HeartPulse size={28} />
             </div>
             <div>
               <h1 style={{ margin: 0, fontSize: '28px', fontWeight: '700' }}>
