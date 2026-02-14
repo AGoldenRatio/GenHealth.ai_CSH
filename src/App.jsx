@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
+import {
   Activity,
   DollarSign,
   Users,
@@ -19,9 +19,9 @@ import {
   Calendar,
   Zap,
   Target,
-  Shield
+  Shield,
+  HeartPulse
 } from 'lucide-react';
-import { ActivityHeart } from '@untitledui/icons';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
 // Expected stage durations (in days) for stalled stage calculation
@@ -600,15 +600,31 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <div style={{
+              position: 'relative',
               width: '48px',
               height: '48px',
-              background: 'linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%)',
-              borderRadius: '12px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <ActivityHeart size={28} />
+              <div style={{
+                position: 'absolute',
+                inset: '-4px',
+                borderRadius: '16px',
+                background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(168, 85, 247, 0.15) 100%)',
+                filter: 'blur(2px)'
+              }} />
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                borderRadius: '14px',
+                background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(168, 85, 247, 0.08) 100%)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(139, 92, 246, 0.25)',
+                boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.08), 0 0 20px rgba(139, 92, 246, 0.15)'
+              }} />
+              <HeartPulse size={26} style={{ position: 'relative', color: '#a78bfa', strokeWidth: 1.8 }} />
             </div>
             <div>
               <h1 style={{ margin: 0, fontSize: '28px', fontWeight: '700' }}>
