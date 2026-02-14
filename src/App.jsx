@@ -19,9 +19,9 @@ import {
   Calendar,
   Zap,
   Target,
-  Shield,
-  HeartPulse
+  Shield
 } from 'lucide-react';
+import { ActivityHeart } from '@untitledui/icons';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
 // Expected stage durations (in days) for stalled stage calculation
@@ -603,7 +603,7 @@ function App() {
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <HeartPulse size={28} />
+              <ActivityHeart size={28} />
             </div>
             <div>
               <h1 style={{ margin: 0, fontSize: '28px', fontWeight: '700' }}>
